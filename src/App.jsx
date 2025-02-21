@@ -1,8 +1,14 @@
+import BarraBusqueda from "./components/BarraBusqueda"
+import TablaProductos from "./components/TablaProductos"
 
-const App = () => {
+
+const TablaProductosFiltrable = () => {
   return (
-    <div>App</div>
+    <>
+      <BarraBusqueda />
+      <TablaProductos />
+    </>
   )
 }
 
-export default App
+export default TablaProductosFiltrable
