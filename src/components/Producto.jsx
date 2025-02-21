@@ -1,6 +1,14 @@
-const Producto = () => {
+const Producto = ({ producto }) => {
+    const nombre = producto.stock ? producto.nombre :
+        <span style={{ color: 'red' }}>
+            {producto.nombre}
+        </span>
+
     return (
-    <div>Producto</div>
+        <tr>
+            <td>{nombre}</td>
+            <td>{producto.precio}</td>
+        </tr>
     )
 }
 

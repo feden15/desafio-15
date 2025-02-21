@@ -1,7 +1,13 @@
-const CategoriaProducto = () => {
+const CategoriaProducto = ({ categoria }) => {
     return (
-    <div>CategoriaProducto</div>
-    )
+        <>
+            <tr>
+                <th colSpan="2">
+                    {categoria}
+                </th>
+            </tr>
+        </>
+      );
 }
 
 export default CategoriaProducto
