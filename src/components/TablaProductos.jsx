@@ -1,12 +1,21 @@
 import CategoriaProducto from "./CategoriaProducto"
 import Producto from "./Producto"
 
-const TablaProductos = ({producto}) => {
+const TablaProductos = ({producto, filtroTexto, enStock}) => {
     
     const filas = [];
     let categoriaAnterior = null;
 
     producto.forEach((producto) => {
+
+        if (producto.nombre.toLowerCase().indexOf(filtroTexto.toLowerCase()) === -1) {
+            return
+        }
+
+        if (enStock && !producto.stock) {
+            return
+          }
+
         if (producto.categoria !== categoriaAnterior) {
             filas.push(
             <CategoriaProducto

@@ -10,4 +10,4 @@ const CategoriaProducto = ({ categoria }) => {
       );
 }
 
-export default CategoriaProducto
+export default CategoriaProducto 
