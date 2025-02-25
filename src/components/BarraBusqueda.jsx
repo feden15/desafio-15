@@ -1,6 +1,8 @@
 const BarraBusqueda = ({ filtroTexto, enStock, cambioFiltroTexto, cambioEnStock }) => {
   return (
-      <form className="bg-white p-4 shadow-md rounded-lg flex flex-col gap-3">
+      <form
+        onSubmit={(e) => e.preventDefault()} // Para que no se recargue la página, impide apretar "enter"
+        className="bg-white p-4 shadow-md rounded-lg flex flex-col gap-3">
           <input
               type="text"
               value={filtroTexto}
