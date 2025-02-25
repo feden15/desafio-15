@@ -8,7 +8,7 @@ const TablaProductosFiltrable = ({ producto }) => {
     const [enStock, setEnStock] = useState(false)
 
     return (
-        <div>
+        <div className="min-h-screen bg-gray-100 p-6">
           <BarraBusqueda
             filtroTexto={filtroTexto}
             enStock={enStock}
